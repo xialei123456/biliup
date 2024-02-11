@@ -103,6 +103,6 @@ def send_upload_event(stream_info):
     # 可能对同一个url同时发送两次上传事件
     with NamedLock(f"upload_count_{stream_info['url']}"):
         from .handler import event_manager, UPLOAD
-        # += 不是原子操作
+        # += 不是原子操作  | 原子操作：不会被线程调度打断的操作，有原生的也可以认为加lock设置
         context['url_upload_count'][stream_info['url']] += 1
         event_manager.send_event(Event(UPLOAD, (stream_info,)))
