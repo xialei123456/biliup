@@ -62,11 +62,11 @@
 5. 访问`http://localhost:3000`
 ****
 ## 支持
-| 直播平台 | 支持类型| 链接示例 | 特殊注释 |
+| 直播平台 | 支持的类型有哪些| 链接示例 | 特殊注释 |
 | ------| ---- | ------ | ------ |
-| 虎牙 | `直播` | `https://www.huya.com/123456` | 可录制弹幕 |
-| 斗鱼 | `直播` | `https://www.douyu.com/123456` | 可录制弹幕 |
-| YY语音 | `直播`| `https://www.yy.com/123456` |
+| 虎牙 | 直播 | `https://www.huya.com/123456` | 可录制弹幕 |
+| 斗鱼 | 直播 | `https://www.douyu.com/123456` | 可录制弹幕 |
+| YY语音 | 直播| `https://www.yy.com/123456` |
 | 哔哩哔哩 | 直播 | `https://live.bilibili.com/123456` | 特殊分区hls流需要单独配置/可录制弹幕 |
 | acfun | 直播 | `https://live.acfun.cn/live/123456` |
 | afreecaTV | 直播 | `https://play.afreecatv.com/biliup123/123456` | 录制部分直播时需要登陆 |
