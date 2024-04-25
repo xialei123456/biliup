@@ -79,8 +79,8 @@
 | 映客 | 直播 | `https://www.inke.cn/liveroom/index.html?uid=123456` |
 | 猫耳FM | 直播 | `https://fm.missevan.com/live/123456` | 猫耳为纯音频流 |
 | nico | 直播 | `https://live.nicovideo.jp/watch/lv123456` | 可配置登录信息 |
-| twitch | 直播/回放 &nbsp; &nbsp; &nbsp; &nbsp; | 直播:`https://www.twitch.tv/biliup123`<br>回放:`https://www.twitch.tv/biliup123/videos?filter=archives&sort=time`  | 可配置登录信息/尽量录制回放/可录制弹幕 |
-| youtube | 直播/回放 &nbsp; &nbsp; &nbsp; &nbsp; | 直播:`https://www.youtube.com/watch?v=biliup123`<br>回放:`https://www.youtube.com/@biliup123/videos` | 可配置登录信息/尽量录制回放/可配置回放下载日期 |
+| twitch | 直播/回放 | 直播:`https://www.twitch.tv/biliup123`<br>回放:`https://www.twitch.tv/biliup123/videos?filter=archives&sort=time`  | 可配置登录信息/尽量录制回放/可录制弹幕 |
+| youtube | 直播/回放 | 直播:`https://www.youtube.com/watch?v=biliup123`<br>回放:`https://www.youtube.com/@biliup123/videos` | 可配置登录信息/尽量录制回放/可配置回放下载日期 |
 * 理论上streamlink与yt-dlp支持的都可以下载，但不保证可以正常使用，详见:[streamlink支持列表](https://streamlink.github.io/plugins.html)，[yt-dlp支持列表](https://github.com/yt-dlp/yt-dlp/tree/master/yt_dlp/extractor).
 ****
 
