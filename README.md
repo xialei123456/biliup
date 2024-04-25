@@ -62,6 +62,12 @@
 5. 访问`http://localhost:3000`
 ****
 ## 支持
+<colgroup>
+    <col style="width: 10%">
+    <col style="width: 15%">
+    <col style="width: 55%">
+    <col style="width: 20%">
+</colgroup>
 
 | 直播平台 |支持类型| 链接示例 | 特殊注释 |
 | :------:| :---------: | ------ | ------ |
