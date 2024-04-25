@@ -62,14 +62,7 @@
 5. 访问`http://localhost:3000`
 ****
 ## 支持
-<colgroup>
-    <col style="width: 10%">
-    <col style="width: 15%">
-    <col style="width: 55%">
-    <col style="width: 20%">
-</colgroup>
-
-| 直播平台 |支持类型 &nbsp; | 链接示例 | 特殊注释 |
+| 直播平台 |                        支持类型| 链接示例 | 特殊注释 |
 | :------:| :---------: | ------ | ------ |
 | 虎牙 | 直播 | `https://www.huya.com/123456` | 可录制弹幕 |
 | 斗鱼 | 直播 | `https://www.douyu.com/123456` | 可录制弹幕 |
