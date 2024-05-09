@@ -98,14 +98,9 @@ class Huya(DownloadBase):
             self.raw_stream_url += f"&ratio={record_ratio}"
         return True
 
-    def danmaku_download_start(self, filename):
+    def danmaku_init(self):
         if self.huya_danmaku:
-            self.danmaku = DanmakuClient(self.url, filename + "." + self.suffix)
-            self.danmaku.start()
-
-    def close(self):
-        if self.danmaku:
-            self.danmaku.stop()
+            self.danmaku = DanmakuClient(self.url, self.gen_download_filename())
 
 
 def _get_info_in_html(room_id, fake_headers):

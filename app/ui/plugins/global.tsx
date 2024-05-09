@@ -48,6 +48,7 @@ const Global: React.FC = () => {
                         alignSelf: "stretch",
                         padding: 0,
                     }}
+                    showClear={true}
                 >
                     <Select.Option value="streamlink">
                         streamlink（混合模式）
@@ -61,7 +62,7 @@ const Global: React.FC = () => {
                     label="视频分段大小（file_size）"
                     extraText={
                         <div style={{ fontSize: "14px" }}>
-                            录像单文件大小限制，超过此大小分段下载
+                            录像单文件大小限制，超过此大小分段下载，下载回放时无法使用
                             <br />
                             单位：Byte，示例：4294967296（4GB）
                         </div>
@@ -85,8 +86,21 @@ const Global: React.FC = () => {
                         </div>
                     }
                     label="视频分段时长（segment_time）"
-                    placeholder="00:00:00"
+                    placeholder="01:00:00"
                     style={{ width: "100%" }}
+                    fieldStyle={{
+                        alignSelf: "stretch",
+                        padding: 0,
+                    }}
+                />
+                <Form.Switch
+                    field="segment_processor_parallel"
+                    extraText={
+                        <div style={{ fontSize: "14px" }}>
+                            开启后无法保证分段后处理先后执行顺序
+                        </div>
+                    }
+                    label="视频分段后处理并行（segment_processor_parallel)"
                     fieldStyle={{
                         alignSelf: "stretch",
                         padding: 0,
@@ -194,6 +208,7 @@ const Global: React.FC = () => {
                         alignSelf: "stretch",
                         padding: 0,
                     }}
+                    showClear={true}
                 >
                     <Form.Select.Option value="web">
                         网页端（web）
@@ -212,6 +227,7 @@ const Global: React.FC = () => {
                         alignSelf: "stretch",
                         padding: 0,
                     }}
+                    showClear={true}
                 >
                     <Form.Select.Option value="bili_web">
                         bili_web
@@ -233,6 +249,7 @@ const Global: React.FC = () => {
                         alignSelf: "stretch",
                         padding: 0,
                     }}
+                    showClear={true}
                 >
                     <Form.Select.Option value="AUTO">AUTO（自动，默认）</Form.Select.Option>
                     <Form.Select.Option value="bda2">bda2</Form.Select.Option>
