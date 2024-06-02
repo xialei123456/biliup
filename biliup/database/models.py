@@ -69,6 +69,17 @@ BaseModel.metadata = MetaData(naming_convention=convention)  # 定义命名惯�
 # BaseModel.metadata.reflect(bind=engine)  # 绑定反射会导致表重复定义
 
 
+class UploadedInfo(BaseModel):
+    """保存已经成功上传的Streamer的id，以及bv号；通过外键与StreamerInfo关联，需要用到里面的直播开始时间"""
+    __tablename__ = "uploadedinfo"
+
+    id: Mapped[int] = mapped_column(primary_key=True)  # 自增主键
+    bv: Mapped[str] = mapped_column(nullable=False)    # 保存上传成功的bv号
+    # 外键, 便于查询某个streamer是否已经上传，若已上传关联本表获取bv号以便append
+    streamer_info_id =  mapped_column(ForeignKey("streamerinfo.id", ondelete="CASCADE"), nullable=False)
+    streamerinfo: Mapped[StreamerInfo] = relationship(back_populates="uploadedinfo")
+
+
 class StreamerInfo(BaseModel):
     """下载信息"""
     __tablename__ = "streamerinfo"
