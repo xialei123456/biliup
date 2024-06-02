@@ -15,6 +15,7 @@ from .models import (
     BaseModel,
     StreamerInfo,
     FileList,
+    UploaderInfo #autoappend by xialei
 )
 
 SessionLocal = sessionmaker(bind=engine, autocommit=False)
