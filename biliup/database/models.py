@@ -83,7 +83,7 @@ class StreamerInfo(BaseModel):
     date: Mapped[datetime] = mapped_column(nullable=False)  # 开播时间
     live_cover_path: Mapped[str] = mapped_column(nullable=False)  # 封面存储路径
     filelist: Mapped[List["FileList"]] = relationship(back_populates="streamerinfo")
-
+    uploadedinfo: Mapped[List["UploadedInfo"]] = relationship("UploadedInfo", back_populates="streamerinfo")  #xl-autoappend
 class UploadedInfo(BaseModel):
     """保存已经成功上传的Streamer的id，以及bv号；通过外键与StreamerInfo关联，需要用到里面的直播开始时间"""
     __tablename__ = "uploadedinfo"
@@ -92,7 +92,7 @@ class UploadedInfo(BaseModel):
     bv: Mapped[str] = mapped_column(nullable=False)    # 保存上传成功的bv号
     # 外键, 便于查询某个streamer是否已经上传，若已上传关联本表获取bv号以便append
     streamer_info_id =  mapped_column(ForeignKey("streamerinfo.id", ondelete="CASCADE"), nullable=False)
-    streamerinfo: Mapped[StreamerInfo] = relationship(back_populates="uploadedinfo")
+    streamerinfo: Mapped[StreamerInfo] = relationship("StreamerInfo", back_populates="uploadedinfo")  # 修改这行,与上面对应
 
 class FileList(BaseModel):
     """存储文件名列表, 通过外键和 StreamerInfo 表关联"""
